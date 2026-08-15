@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-bind="meta.title">Portafolio Académico — Derecho Fundamental</title>
+<meta name="description" content="Portafolio virtual académico sobre análisis comparativo de un derecho fundamental en Colombia">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="nav-icon">⚖️</span>
+    <span class="nav-title" data-bind="meta.shortTitle">Portafolio Jurídico</span>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#inicio">Inicio</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#presentacion">Presentación</a>
+    <a href="#derecho">Derecho Fundamental</a>
+    <a href="#objetivos">Metas y Objetivos</a>
+    <a href="#problema">Problema</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#historico">Marco Histórico</a>
+    <a href="#investigacion">Investigación</a>
+    <a href="#comparativo">Análisis Comparativo</a>
+    <a href="#casos">Casos Recientes</a>
+    <a href="#mecanismos">Mecanismos de Protección</a>
+    <a href="#plan">Plan de Trabajo</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#evidencias">Actividades</a>
+    <a href="#reflexion">Reflexión</a>
+    <a href="#autoevaluacion">Autoevaluación</a>
+    <a href="#final">Presentación Final</a>
+    <a href="#conclusiones">Conclusiones</a>
+    <a href="#fuentes">Fuentes</a>
+  </nav>
+  <div class="nav-status">
+    <span id="avanceProyecto">Avance del proyecto: 100%</span>
+  </div>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <p class="hero-kicker">Actividad Evaluativa Eje 1 — Derecho Constitucional</p>
+    <h1 id="heroTitulo">[Título del proyecto]</h1>
+    <h2 id="heroDerecho">[Derecho fundamental seleccionado]</h2>
+    <p class="hero-frase" id="heroFrase">[Frase introductoria]</p>
+
+    <div class="hero-meta">
+      <div><strong>Programa:</strong> <span id="heroPrograma"></span></div>
+      <div><strong>Asignatura:</strong> <span id="heroAsignatura"></span></div>
+      <div><strong>Docente:</strong> <span id="heroDocente"></span></div>
+      <div><strong>Institución:</strong> <span id="heroInstitucion"></span></div>
+      <div><strong>Fecha:</strong> <span id="heroFecha"></span></div>
+    </div>
+
+    <a href="#objetivos" class="btn-primary">Explorar proyecto</a>
+  </div>
+</section>
+
+<main>
+
+  <!-- 0. EQUIPO -->
+  <section id="equipo" class="section">
+    <h2 class="section-title">Presentación del Equipo</h2>
+    <div class="cards-grid" id="equipoCards"></div>
+    <div class="card nota-ia" id="notaIA"></div>
+  </section>
+
+  <!-- 1. PRESENTACIÓN -->
+  <section id="presentacion" class="section section-alt">
+    <h2 class="section-title">1. Presentación del Proyecto</h2>
+    <div class="cards-grid" id="presentacionCards"></div>
+  </section>
+
+  <!-- 2. DERECHO FUNDAMENTAL -->
+  <section id="derecho" class="section">
+    <h2 class="section-title">2. Derecho Fundamental a la Igualdad</h2>
+    <div class="derecho-panel" id="derechoPanel"></div>
+    <h3 class="subsection-title">Dimensiones del derecho a la igualdad</h3>
+    <div id="dimensionesTable"></div>
+    <h3 class="subsection-title">Test de igualdad</h3>
+    <div class="card" id="testIgualdadCard"></div>
+  </section>
+
+  <!-- 3. METAS Y OBJETIVOS -->
+  <section id="objetivos" class="section section-alt">
+    <h2 class="section-title">3. Metas y Objetivos</h2>
+    <div class="cards-grid" id="objetivosCards"></div>
+  </section>
+
+  <!-- 4. PROBLEMA -->
+  <section id="problema" class="section">
+    <h2 class="section-title">4. Planteamiento del Problema</h2>
+    <div id="problemaPanel"></div>
+  </section>
+
+  <!-- 5. PREGUNTAS -->
+  <section id="preguntas" class="section section-alt">
+    <h2 class="section-title">5. Preguntas Orientadoras</h2>
+    <div class="accordion" id="preguntasAccordion"></div>
+  </section>
+
+  <!-- MARCO HISTÓRICO -->
+  <section id="historico" class="section">
+    <h2 class="section-title">Marco Histórico: Evolución Constitucional</h2>
+    <h3 class="subsection-title">Constitución de 1886</h3>
+    <div id="tabla1886"></div>
+    <h3 class="subsection-title">Limitaciones al derecho a la igualdad en 1886</h3>
+    <ul class="lista-pendientes" id="limitaciones1886"></ul>
+    <h3 class="subsection-title">Constitución de 1991</h3>
+    <div id="tabla1991"></div>
+    <h3 class="subsection-title">Avances en materia de igualdad (1991)</h3>
+    <ul class="lista-pendientes" id="avances1991"></ul>
+  </section>
+
+  <!-- 8. INVESTIGACIÓN -->
+  <section id="investigacion" class="section section-alt">
+    <h2 class="section-title">Investigación Documental y Jurisprudencial</h2>
+    <div class="tabs" id="investigacionTabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="normas">Constitución y Normas</button>
+        <button class="tab-btn" data-tab="jurisprudencia">Jurisprudencia</button>
+        <button class="tab-btn" data-tab="doctrina">Doctrina</button>
+      </div>
+      <div class="tab-content active" id="tab-normas"></div>
+      <div class="tab-content" id="tab-jurisprudencia"></div>
+      <div class="tab-content" id="tab-doctrina"></div>
+    </div>
+  </section>
+
+  <!-- 9. ANÁLISIS COMPARATIVO -->
+  <section id="comparativo" class="section">
+    <h2 class="section-title">Comparación Constituciones: 1886 vs 1991</h2>
+    <div id="comparativoTable"></div>
+  </section>
+
+  <!-- 10. CASOS RECIENTES -->
+  <section id="casos" class="section section-alt">
+    <h2 class="section-title">Caso Práctico: Análisis de un Caso Reciente</h2>
+    <div class="cards-grid" id="casosCards"></div>
+  </section>
+
+  <!-- MECANISMOS DE PROTECCIÓN -->
+  <section id="mecanismos" class="section">
+    <h2 class="section-title">Mecanismos de Protección del Derecho a la Igualdad</h2>
+    <h3 class="subsection-title">Mecanismos Constitucionales</h3>
+    <div id="mecanismosConstitucionales"></div>
+    <h3 class="subsection-title">Mecanismos Internacionales</h3>
+    <div id="mecanismosInternacionales"></div>
+    <h3 class="subsection-title">Instituciones de Protección</h3>
+    <ul class="lista-pendientes" id="institucionesProteccion"></ul>
+  </section>
+
+  <!-- 6. PLAN DE TRABAJO -->
+  <section id="plan" class="section section-alt">
+    <h2 class="section-title">Plan de Trabajo</h2>
+    <h3 class="subsection-title">Distribución de roles</h3>
+    <div id="rolesTable"></div>
+    <h3 class="subsection-title">Fases del proyecto</h3>
+    <div class="timeline" id="planTimeline"></div>
+    <h3 class="subsection-title">Recursos Necesarios</h3>
+    <div id="recursosTable"></div>
+  </section>
+
+  <!-- 7. CRONOGRAMA -->
+  <section id="cronograma" class="section">
+    <h2 class="section-title">Cronograma de Actividades (11-15 agosto)</h2>
+    <div class="gantt" id="ganttChart"></div>
+  </section>
+
+  <!-- 11. RESULTADOS -->
+  <section id="resultados" class="section section-alt">
+    <h2 class="section-title">Análisis y Resultados</h2>
+    <div class="cards-grid" id="resultadosCards"></div>
+  </section>
+
+  <!-- 12. EVIDENCIAS -->
+  <section id="evidencias" class="section">
+    <h2 class="section-title">Actividades y Evidencias</h2>
+    <div class="timeline" id="evidenciasTimeline"></div>
+  </section>
+
+  <!-- 13. REFLEXIÓN -->
+  <section id="reflexion" class="section section-reflexion">
+    <h2 class="section-title">Reflexiones y Conclusiones del Equipo</h2>
+    <div id="reflexionPanel"></div>
+  </section>
+
+  <!-- AUTOEVALUACIÓN -->
+  <section id="autoevaluacion" class="section">
+    <h2 class="section-title">Autoevaluación del Equipo</h2>
+    <h3 class="subsection-title">Matriz de autoevaluación</h3>
+    <div id="autoevaluacionTable"></div>
+    <h3 class="subsection-title">Lecciones aprendidas</h3>
+    <ul class="lista-pendientes" id="leccionesAprendidas"></ul>
+  </section>
+
+  <!-- 14. PRESENTACIÓN FINAL -->
+  <section id="final" class="section section-alt">
+    <h2 class="section-title">Presentación Final del Proyecto</h2>
+    <div id="finalPanel"></div>
+  </section>
+
+  <!-- 15. CONCLUSIONES -->
+  <section id="conclusiones" class="section">
+    <h2 class="section-title">Conclusiones del Análisis</h2>
+    <div class="cards-grid" id="conclusionesCards"></div>
+  </section>
+
+  <!-- 16. FUENTES -->
+  <section id="fuentes" class="section section-alt">
+    <h2 class="section-title">Referencias</h2>
+    <div id="fuentesPanel"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Portafolio académico — <span id="footerDerecho">[Derecho fundamental]</span> · <span id="footerFecha">2026</span></p>
+  <p>Fundación Universitaria Areandina — Facultad de Ciencias Administrativas, Económicas y Financieras</p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
