@@ -294,7 +294,6 @@ const PROYECTO = {
       "Constitución Política de Colombia de 1991. Recuperado de: https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4125",
       "Constitución Política de Colombia de 1886. Recuperado de: https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=7153"
     ],
-    leyes: [],
     jurisprudencia: [
       "Corte Constitucional de Colombia. (1992). Sentencia T-422. M.P.: Eduardo Cifuentes Muñoz. https://www.corteconstitucional.gov.co/relatoria/1992/t-422-92.htm",
       "Corte Constitucional de Colombia. (1996). Sentencia C-022. M.P.: Carlos Gaviria Díaz. https://www.corteconstitucional.gov.co/relatoria/1996/C-022-96.htm",
@@ -315,7 +314,6 @@ const PROYECTO = {
     sitiosWeb: [
       "Relatoría de la Corte Constitucional: https://www.corteconstitucional.gov.co/relatoria/buscador-jurisprudencia"
     ],
-    otras: []
   }
 };
 
