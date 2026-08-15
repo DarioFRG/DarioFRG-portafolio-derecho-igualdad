@@ -20,23 +20,77 @@ document.addEventListener("DOMContentLoaded", () => {
   setText("footerFecha", P.portada?.fecha);
   setText("avanceProyecto", `Avance del proyecto: ${P.meta?.avance || "0%"}`);
 
-  /* ---------- NAV MOBILE ---------- */
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
-  navToggle?.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", navLinks.classList.contains("open"));
+  /* =========================================================
+     NAVEGACIÓN POR SECCIONES (una visible a la vez)
+  ========================================================= */
+  const SECTION_ORDER = [
+    "inicio","equipo","presentacion","derecho","objetivos","problema",
+    "preguntas","historico","investigacion","comparativo","casos",
+    "mecanismos","plan","cronograma","resultados","evidencias",
+    "reflexion","autoevaluacion","final","conclusiones","fuentes"
+  ];
+
+  const sectionSelect = document.getElementById("sectionSelect");
+  const btnPrev = document.getElementById("btnPrevSection");
+  const btnNext = document.getElementById("btnNextSection");
+
+  function getSectionEl(id) {
+    return document.getElementById(id);
+  }
+
+  function showSection(id) {
+    if (!SECTION_ORDER.includes(id)) id = SECTION_ORDER[0];
+
+    SECTION_ORDER.forEach(secId => {
+      const node = getSectionEl(secId);
+      if (node) node.classList.remove("active-section");
+    });
+
+    const target = getSectionEl(id);
+    if (target) target.classList.add("active-section");
+
+    if (sectionSelect) sectionSelect.value = id;
+
+    const idx = SECTION_ORDER.indexOf(id);
+    if (btnPrev) btnPrev.disabled = idx <= 0;
+    if (btnNext) btnNext.disabled = idx >= SECTION_ORDER.length - 1;
+
+    window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+    history.replaceState(null, "", "#" + id);
+  }
+
+  sectionSelect?.addEventListener("change", (e) => showSection(e.target.value));
+
+  btnPrev?.addEventListener("click", () => {
+    const current = sectionSelect ? sectionSelect.value : SECTION_ORDER[0];
+    const idx = SECTION_ORDER.indexOf(current);
+    if (idx > 0) showSection(SECTION_ORDER[idx - 1]);
   });
-  navLinks?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+
+  btnNext?.addEventListener("click", () => {
+    const current = sectionSelect ? sectionSelect.value : SECTION_ORDER[0];
+    const idx = SECTION_ORDER.indexOf(current);
+    if (idx < SECTION_ORDER.length - 1) showSection(SECTION_ORDER[idx + 1]);
+  });
+
+  // Botones/enlaces con data-goto (ej: "Explorar proyecto" en el hero)
+  document.querySelectorAll("[data-goto]").forEach(node => {
+    node.addEventListener("click", () => showSection(node.getAttribute("data-goto")));
+  });
+
+  // Al cargar, respeta el hash de la URL si existe y es válido; si no, muestra "inicio"
+  const initialHash = window.location.hash.replace("#", "");
+  showSection(SECTION_ORDER.includes(initialHash) ? initialHash : "inicio");
 
   /* ---------- PROGRESS BAR + BACK TO TOP ---------- */
   const progressBar = document.getElementById("progressBar");
   const backToTop = document.getElementById("backToTop");
   window.addEventListener("scroll", () => {
     const h = document.documentElement;
-    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-    progressBar.style.width = scrolled + "%";
-    backToTop.classList.toggle("show", h.scrollTop > 400);
+    const denom = (h.scrollHeight - h.clientHeight) || 1;
+    const scrolled = (h.scrollTop) / denom * 100;
+    if (progressBar) progressBar.style.width = scrolled + "%";
+    if (backToTop) backToTop.classList.toggle("show", h.scrollTop > 400);
   });
   backToTop?.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
 
