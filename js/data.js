@@ -252,12 +252,12 @@ const PROYECTO = {
   ],
 
   reflexion: {
-    aprendizajes: "El derecho a la igualdad no es solo un principio normativo, sino una construcción social permanente.",
-    dificultades: "[INFORMACIÓN PENDIENTE DE INCORPORAR]",
-    soluciones: "La distribución de roles permitió un abordaje integral del tema mediante trabajo colaborativo.",
-    conocimientosAplicados: "Análisis de jurisprudencia constitucional, test de igualdad, comparación histórica entre las Constituciones de 1886 y 1991.",
+    aprendizajes: "El derecho a la igualdad ha evolucionado desde una concepción formal y restringida en la Constitución de 1886 hacia una concepción material y amplia en la Constitución de 1991.",
+    dificultades: "La Constitución de 1991 representa un cambio fundamental al pasar de un Estado de derecho a un Estado Social de Derecho, lo que implica obligaciones positivas del Estado para garantizar la igualdad real y efectiva.",
+    soluciones: "La acción de tutela se constituye como el mecanismo más efectivo para la protección inmediata del derecho a la igualdad, complementada con la jurisprudencia de la Corte Constitucional.",
+    conocimientosAplicados: "A pesar de los avances normativos, persisten brechas entre la consagración formal del derecho y su aplicación efectiva, especialmente para grupos históricamente discriminados.",
     aporte: "El análisis de sentencias permitió comprender la aplicación práctica del derecho a la igualdad; la comprensión de la evolución constitucional permite dimensionar los avances actuales.",
-    reflexionFinal: "La Constitución de 1991 brindó las herramientas jurídicas, pero su efectividad depende de la acción ciudadana, la vigilancia institucional y la correcta aplicación de los mecanismos de protección. Como futuros administradores públicos, el equipo reconoce su responsabilidad en la materialización de estos derechos en las políticas públicas."
+    reflexionFinal: "Como equipo, reconocemos que el derecho a la igualdad no es solo un principio normativo sino una construcción social permanente. La Constitución de 1991 nos brindó las herramientas, pero su efectividad depende de la acción ciudadana, la vigilancia institucional y la aplicación correcta de los mecanismos de protección. Como futuros administradores públicos, comprendemos la responsabilidad que tenemos en la materialización de estos derechos en las políticas públicas."
   },
 
   autoevaluacion: {
