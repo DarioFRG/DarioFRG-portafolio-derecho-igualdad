@@ -17,38 +17,40 @@
     <span class="nav-icon">⚖️</span>
     <span class="nav-title" data-bind="meta.shortTitle">Portafolio Jurídico</span>
   </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="nav-links" id="navLinks">
-    <a href="#inicio">Inicio</a>
-    <a href="#equipo">Equipo</a>
-    <a href="#presentacion">Presentación</a>
-    <a href="#derecho">Derecho Fundamental</a>
-    <a href="#objetivos">Metas y Objetivos</a>
-    <a href="#problema">Problema</a>
-    <a href="#preguntas">Preguntas</a>
-    <a href="#historico">Marco Histórico</a>
-    <a href="#investigacion">Investigación</a>
-    <a href="#comparativo">Análisis Comparativo</a>
-    <a href="#casos">Casos Recientes</a>
-    <a href="#mecanismos">Mecanismos de Protección</a>
-    <a href="#plan">Plan de Trabajo</a>
-    <a href="#cronograma">Cronograma</a>
-    <a href="#resultados">Resultados</a>
-    <a href="#evidencias">Actividades</a>
-    <a href="#reflexion">Reflexión</a>
-    <a href="#autoevaluacion">Autoevaluación</a>
-    <a href="#final">Presentación Final</a>
-    <a href="#conclusiones">Conclusiones</a>
-    <a href="#fuentes">Fuentes</a>
-  </nav>
+
+  <div class="nav-selector">
+    <label for="sectionSelect">Ir a:</label>
+    <select id="sectionSelect" class="section-select">
+      <option value="inicio">Inicio</option>
+      <option value="equipo">Equipo</option>
+      <option value="presentacion">Presentación</option>
+      <option value="derecho">Derecho Fundamental</option>
+      <option value="objetivos">Metas y Objetivos</option>
+      <option value="problema">Problema</option>
+      <option value="preguntas">Preguntas</option>
+      <option value="historico">Marco Histórico</option>
+      <option value="investigacion">Investigación</option>
+      <option value="comparativo">Análisis Comparativo</option>
+      <option value="casos">Casos Recientes</option>
+      <option value="mecanismos">Mecanismos de Protección</option>
+      <option value="plan">Plan de Trabajo</option>
+      <option value="cronograma">Cronograma</option>
+      <option value="resultados">Resultados</option>
+      <option value="evidencias">Actividades</option>
+      <option value="reflexion">Reflexión</option>
+      <option value="autoevaluacion">Autoevaluación</option>
+      <option value="final">Presentación Final</option>
+      <option value="conclusiones">Conclusiones</option>
+      <option value="fuentes">Fuentes</option>
+    </select>
+  </div>
+
   <div class="nav-status">
     <span id="avanceProyecto">Avance del proyecto: 100%</span>
   </div>
 </header>
 
-<section id="inicio" class="hero">
+<section id="inicio" class="hero active-section">
   <div class="hero-content">
     <p class="hero-kicker">Actividad Evaluativa Eje 1 — Derecho Constitucional</p>
     <h1 id="heroTitulo">[Título del proyecto]</h1>
@@ -63,7 +65,7 @@
       <div><strong>Fecha:</strong> <span id="heroFecha"></span></div>
     </div>
 
-    <a href="#objetivos" class="btn-primary">Explorar proyecto</a>
+    <button type="button" class="btn-primary" data-goto="objetivos">Explorar proyecto</button>
   </div>
 </section>
 
@@ -224,6 +226,11 @@
   </section>
 
 </main>
+
+<div class="section-nav-buttons">
+  <button type="button" id="btnPrevSection">← Anterior</button>
+  <button type="button" id="btnNextSection">Siguiente →</button>
+</div>
 
 <footer class="footer">
   <p>Portafolio académico — <span id="footerDerecho">[Derecho fundamental]</span> · <span id="footerFecha">2026</span></p>
