@@ -318,3 +318,10 @@ const PROYECTO = {
     otras: []
   }
 };
+
+/* =========================================================
+   IMPORTANTE: exponer explícitamente el objeto en window.
+   Sin esta línea, `const PROYECTO` NO queda disponible como
+   `window.PROYECTO`, y script.js no puede leer los datos.
+========================================================= */
+window.PROYECTO = PROYECTO;
