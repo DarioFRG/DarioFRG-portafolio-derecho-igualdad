@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const SECTION_ORDER = [
     "inicio","equipo","presentacion","derecho","objetivos","problema",
     "preguntas","historico","investigacion","comparativo","casos",
-    "mecanismos","plan","cronograma","resultados","evidencias",
-    "reflexion","autoevaluacion","final","conclusiones","fuentes"
+    "mecanismos","plan","cronograma","resultados",
+    "reflexion","autoevaluacion","conclusiones","fuentes"
   ];
 
   const sectionSelect = document.getElementById("sectionSelect");
