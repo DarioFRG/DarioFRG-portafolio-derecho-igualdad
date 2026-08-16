@@ -405,19 +405,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const leccionesWrap = document.getElementById("leccionesAprendidas");
   if (leccionesWrap) leccionesWrap.innerHTML = (auto.lecciones||[]).map(l=>`<li>${l}</li>`).join("") || `<li class="pendiente">${PEND}</li>`;
 
-  /* ---------- 14. PRESENTACIÓN FINAL ---------- */
-  const pf = P.presentacionFinal || {};
-  const finalPanel = document.getElementById("finalPanel");
-  if (finalPanel) {
-    let finalHtml = "";
-    if (pf.videoUrl) finalHtml += `<div class="evidencia-media"><iframe src="${pf.videoUrl}" height="420" allowfullscreen></iframe></div>`;
-    else finalHtml += `<p class="pendiente">${PEND} (video)</p>`;
-    finalHtml += `<div class="cards-grid" style="margin-top:1.5rem;">`;
-    finalHtml += pf.pptUrl ? `<div class="card"><h3>Presentación</h3><a href="${pf.pptUrl}" target="_blank">Ver presentación</a></div>` : `<div class="card"><h3>Presentación</h3><p class="pendiente">${PEND}</p></div>`;
-    finalHtml += pf.pdfUrl ? `<div class="card"><h3>Documento PDF</h3><a href="${pf.pdfUrl}" target="_blank">Ver documento</a></div>` : `<div class="card"><h3>Documento PDF</h3><p class="pendiente">${PEND}</p></div>`;
-    finalHtml += pf.enlaceExterno ? `<div class="card"><h3>Enlace externo</h3><a href="${pf.enlaceExterno}" target="_blank">Abrir enlace</a></div>` : `<div class="card"><h3>Enlace externo</h3><p class="pendiente">${PEND}</p></div>`;
-    finalHtml += `</div>`;
-    finalPanel.innerHTML = finalHtml;
   }
 
   /* ---------- 14. CONCLUSIONES ---------- */
