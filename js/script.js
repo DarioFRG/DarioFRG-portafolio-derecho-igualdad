@@ -402,10 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <tbody>${auto.matriz.map(m=>`<tr><td><strong>${m.criterio}</strong></td><td>${m.nivel}</td></tr>`).join("")}</tbody>
     </table>` : `<p class="pendiente">${PEND}</p>`;
   }
-  const leccionesWrap = document.getElementById("leccionesAprendidas");
-  if (leccionesWrap) leccionesWrap.innerHTML = (auto.lecciones||[]).map(l=>`<li>${l}</li>`).join("") || `<li class="pendiente">${PEND}</li>`;
-
-  }
 
   /* ---------- 14. CONCLUSIONES ---------- */
   const conclWrap = document.getElementById("conclusionesCards");
