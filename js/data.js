@@ -245,12 +245,6 @@ const PROYECTO = {
     { categoria:"Debilidades / retos", texto:"Persisten brechas entre la consagración formal del derecho y su aplicación efectiva, especialmente para grupos históricamente discriminados." }
   ],
 
-  evidencias: [
-    { titulo:"Infografía del proyecto (Anexo 1)", descripcion:"Infografía elaborada por el equipo con apoyo de IA generativa, verificada por todos los integrantes.", fecha:"Agosto 11 de 2026", tipo:"imagen", src:"assets/img/infografia.jpg" },
-    { titulo:"Portafolio virtual (Google Sites)", descripcion:"Enlace al portafolio virtual del proyecto.", fecha:"Agosto 14 de 2026", tipo:"enlace", src:"[PEGAR AQUÍ EL ENLACE DE GOOGLE SITES]" },
-    { titulo:"Informe de análisis de casos", descripcion:"Documento con el análisis de casos prácticos elaborado por Darío Fernando Rubio.", fecha:"Agosto 13 de 2026", tipo:"documento", src:"assets/docs/informe-analisis-casos.pdf" }
-  ],
-
   reflexion: {
     aprendizajes: "El derecho a la igualdad ha evolucionado desde una concepción formal y restringida en la Constitución de 1886 hacia una concepción material y amplia en la Constitución de 1991.",
     dificultades: "La Constitución de 1991 representa un cambio fundamental al pasar de un Estado de derecho a un Estado Social de Derecho, lo que implica obligaciones positivas del Estado para garantizar la igualdad real y efectiva.",
@@ -273,13 +267,6 @@ const PROYECTO = {
       "El valor de la jurisprudencia: el análisis de sentencias permitió comprender la aplicación práctica del derecho",
       "La relevancia de la historia: comprender la evolución constitucional permite dimensionar los avances actuales"
     ]
-  },
-
-  presentacionFinal: {
-    videoUrl: "",
-    pptUrl: "",
-    pdfUrl: "",
-    enlaceExterno: "[PEGAR AQUÍ EL ENLACE DE LA PÁGINA WEB / GOOGLE SITES]"
   },
 
   conclusiones: [
