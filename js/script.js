@@ -420,14 +420,14 @@ document.addEventListener("DOMContentLoaded", () => {
     finalPanel.innerHTML = finalHtml;
   }
 
-  /* ---------- 15. CONCLUSIONES ---------- */
+  /* ---------- 14. CONCLUSIONES ---------- */
   const conclWrap = document.getElementById("conclusionesCards");
   if (conclWrap) {
     const concl = P.conclusiones?.length ? P.conclusiones : [PEND];
     conclWrap.innerHTML = concl.map(c => `<div class="card"><p>${c}</p></div>`).join("");
   }
 
-  /* ---------- 16. FUENTES ---------- */
+  /* ---------- 15. FUENTES ---------- */
   const f = P.fuentes || {};
   const fuentesPanel = document.getElementById("fuentesPanel");
   if (fuentesPanel) {
@@ -435,12 +435,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fuentesPanel.innerHTML = `
       <div class="cards-grid">
         <div class="card"><h3>Constitución</h3>${buildList(f.constitucion)}</div>
-        <div class="card"><h3>Leyes</h3>${buildList(f.leyes)}</div>
         <div class="card"><h3>Jurisprudencia</h3>${buildList(f.jurisprudencia)}</div>
         <div class="card"><h3>Libros</h3>${buildList(f.libros)}</div>
         <div class="card"><h3>Artículos académicos</h3>${buildList(f.articulos)}</div>
         <div class="card"><h3>Sitios web</h3>${buildList(f.sitiosWeb)}</div>
-        <div class="card"><h3>Otras fuentes</h3>${buildList(f.otras)}</div>
       </div>`;
   }
 });
