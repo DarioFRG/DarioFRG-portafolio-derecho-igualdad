@@ -360,25 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : `<p class="pendiente">${PEND}</p>`;
   }
 
-  /* ---------- 12. EVIDENCIAS ---------- */
-  const evWrap = document.getElementById("evidenciasTimeline");
-  if (evWrap) {
-    const ev = P.evidencias?.length ? P.evidencias : [];
-    if (!ev.length) evWrap.innerHTML = `<p class="pendiente">${PEND}</p>`;
-    else ev.forEach(e => {
-      let media = "";
-      if (e.tipo === "imagen") media = `<div class="evidencia-media"><img src="${e.src}" alt="${e.titulo}"></div>`;
-      else if (e.tipo === "video") media = `<div class="evidencia-media"><iframe src="${e.src}" allowfullscreen></iframe></div>`;
-      else if (e.tipo === "enlace" || e.tipo === "documento") media = `<p><a href="${e.src}" target="_blank" rel="noopener">Ver ${e.tipo}</a></p>`;
-      evWrap.appendChild(el("div","timeline-item",`
-        <h4>${e.titulo}</h4>
-        <div class="meta">${e.fecha}</div>
-        <p>${e.descripcion}</p>${media}
-      `));
-    });
-  }
-
-  /* ---------- 13. REFLEXIÓN ---------- */
+  /* ---------- 12. REFLEXIÓN ---------- */
   const rf = P.reflexion || {};
   const reflexionPanel = document.getElementById("reflexionPanel");
   if (reflexionPanel) {
@@ -403,14 +385,14 @@ document.addEventListener("DOMContentLoaded", () => {
     </table>` : `<p class="pendiente">${PEND}</p>`;
   }
 
-  /* ---------- 14. CONCLUSIONES ---------- */
+  /* ---------- 13. CONCLUSIONES ---------- */
   const conclWrap = document.getElementById("conclusionesCards");
   if (conclWrap) {
     const concl = P.conclusiones?.length ? P.conclusiones : [PEND];
     conclWrap.innerHTML = concl.map(c => `<div class="card"><p>${c}</p></div>`).join("");
   }
 
-  /* ---------- 15. FUENTES ---------- */
+  /* ---------- 14. FUENTES ---------- */
   const f = P.fuentes || {};
   const fuentesPanel = document.getElementById("fuentesPanel");
   if (fuentesPanel) {
