@@ -215,3 +215,16 @@ table.datos tr:hover td{background:var(--gris-fondo);}
 .back-to-top.show{opacity:1;pointer-events:auto;}
 
 .pendiente{color:var(--alerta);font-style:italic;background:#fbeaea;padding:.15rem .5rem;border-radius:6px;font-size:.85rem;}
+
+.imagen-fuentes {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.imagen-fuentes img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
