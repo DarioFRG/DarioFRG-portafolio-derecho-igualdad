@@ -233,8 +233,8 @@ const PROYECTO = {
     { actividad:"Análisis de casos prácticos", inicio:"2026-08-13", fin:"2026-08-14", producto:"Informe de análisis de casos", estado:"completado" },
     { actividad:"Integración de contenidos y redacción del informe", inicio:"2026-08-14", fin:"2026-08-15", producto:"Borrador del informe", estado:"completado" },
     { actividad:"Diseño y creación del portafolio virtual (página web)", inicio:"2026-08-14", fin:"2026-08-15", producto:"Portafolio en GitHub / Web", estado:"completado" },
-    { actividad:"Revisión final", inicio:"2026-08-15", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" },
-    { actividad:"Autoevaluación y ajustes", inicio:"2026-08-15", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" }
+    { actividad:"Revisión final", inicio:"2026-08-14", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" },
+    { actividad:"Autoevaluación y ajustes", inicio:"2026-08-14", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" }
   ],
 
   resultados: [
@@ -263,9 +263,9 @@ const PROYECTO = {
       { criterio:"Cumplimiento de plazos", nivel:"Excelente (5) — Todas las actividades a tiempo" }
     ],
     lecciones: [
-      "La importancia del trabajo colaborativo: la distribución de roles permitió un abordaje integral del tema",
-      "El valor de la jurisprudencia: el análisis de sentencias permitió comprender la aplicación práctica del derecho",
-      "La relevancia de la historia: comprender la evolución constitucional permite dimensionar los avances actuales"
+      { "La importancia del trabajo colaborativo: la distribución de roles permitió un abordaje integral del tema" },
+      { "El valor de la jurisprudencia: el análisis de sentencias permitió comprender la aplicación práctica del derecho" },
+      { "La relevancia de la historia: comprender la evolución constitucional permite dimensionar los avances actuales" }
     ]
   },
 
