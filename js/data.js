@@ -263,9 +263,9 @@ const PROYECTO = {
       { criterio:"Cumplimiento de plazos", nivel:"Excelente (5) — Todas las actividades a tiempo" }
     ],
     lecciones: [
-      { "La importancia del trabajo colaborativo: la distribución de roles permitió un abordaje integral del tema" },
-      { "El valor de la jurisprudencia: el análisis de sentencias permitió comprender la aplicación práctica del derecho" },
-      { "La relevancia de la historia: comprender la evolución constitucional permite dimensionar los avances actuales" }
+      "La importancia del trabajo colaborativo: la distribución de roles permitió un abordaje integral del tema",
+      "El valor de la jurisprudencia: el análisis de sentencias permitió comprender la aplicación práctica del derecho",
+      "La relevancia de la historia: comprender la evolución constitucional permite dimensionar los avances actuales"
     ]
   },
 
