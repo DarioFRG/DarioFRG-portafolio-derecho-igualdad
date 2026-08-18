@@ -329,38 +329,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
  /* ---------- 7. CRONOGRAMA (Gantt simplificado) ---------- */
-const gantt = document.getElementById("ganttChart");
-if (gantt) {
-  const cron = P.cronograma?.length ? P.cronograma : [];
-if (!cron.length) {gantt.innerHTML = `<p class="pendiente">${PEND}</p>`;
-  } else {
-    // Convertir fechas de forma segura
-  const parseDate = (fecha) => {const d = new Date(`${fecha}T00:00:00`);
-  return isNaN(d.getTime()) ? null : d;
-    };
-  const fechas = cron.flatMap(c => [parseDate(c.inicio), parseDate(c.fin)]).filter(Boolean);
-  const min = new Date(Math.min(...fechas));
-  const max = new Date(Math.max(...fechas));
-  const DAY = 1000 * 60 * 60 * 24;
-    // Se suma un día para incluir tanto el día inicial como el final
-  const totalDays = Math.max(1, Math.round((max - min) / DAY) + 1);
-cron.forEach(c => {
-  const start = parseDate(c.inicio);
-  const end = parseDate(c.fin);
-  if (!start || !end) return;
-      // Posición de inicio de la actividad
-  const offset = (Math.round((start - min) / DAY) / totalDays) * 100;
-     // Duración incluyendo el día inicial y el día final
-  const duration = Math.round((end - start) / DAY) + 1;
-  const width = Math.max(1, (duration / totalDays) * 100);
-  const row = el("div","gantt-row",`
-<div class="gantt-label">${c.actividad}</div>
-<divclass="gantt-track"><div class="gantt bar"style="left:${offset}%;width:${width}%">${c.producto || ""}</div></div>
-`);
-gantt.appendChild(row);
-    });
+  const gantt = document.getElementById("ganttChart");
+  if (gantt) {
+    const cron = P.cronograma?.length ? P.cronograma : [];
+    if (!cron.length) gantt.innerHTML = `<p class="pendiente">${PEND}</p>`;
+    else {
+      const dates = cron.flatMap(c => [new Date(c.inicio), new Date(c.fin)]).filter(dt=>!isNaN(dt));
+      const min = new Date(Math.min(...dates));
+      const max = new Date(Math.max(...dates));
+      const totalDays = Math.max(1,(max-min)/(1000*60*60*24));
+      cron.forEach(c => {
+        const start = new Date(c.inicio), end = new Date(c.fin);
+        const offset = ((start-min)/(1000*60*60*24))/totalDays*100;
+        const width = Math.max(3,((end-start)/(1000*60*60*24))/totalDays*100);
+        const row = el("div","gantt-row",`
+          <div class="gantt-label">${c.actividad}</div>
+          <div class="gantt-track"><div class="gantt-bar" style="left:${offset}%;width:${width}%">${c.producto||""}</div></div>
+        `);
+        gantt.appendChild(row);
+      });
+    }
   }
-}
+
   /* ---------- 11. RESULTADOS ---------- */
   const resWrap = document.getElementById("resultadosCards");
   if (resWrap) {
