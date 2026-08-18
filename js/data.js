@@ -227,12 +227,12 @@ const PROYECTO = {
   ],
 
   cronograma: [
-    { actividad:"Revisión del referente de pensamiento y lecturas asignadas", inicio:"2026-08-11", fin:"2026-08-11", producto:"Infografía", estado:"completado" },
-    { actividad:"Definición del derecho fundamental y planteamiento del problema", inicio:"2026-08-12", fin:"2026-08-12", producto:"Documento de metas y problema", estado:"completado" },
-    { actividad:"Investigación documental y jurisprudencial", inicio:"2026-08-13", fin:"2026-08-13", producto:"Fichas de lectura y jurisprudencia", estado:"completado" },
-    { actividad:"Análisis de casos prácticos", inicio:"2026-08-13", fin:"2026-08-13", producto:"Informe de análisis de casos", estado:"completado" },
-    { actividad:"Integración de contenidos y redacción del informe", inicio:"2026-08-14", fin:"2026-08-14", producto:"Borrador del informe", estado:"completado" },
-    { actividad:"Diseño y creación del portafolio virtual (página web)", inicio:"2026-08-14", fin:"2026-08-14", producto:"Portafolio en Google Sites / Web", estado:"completado" },
+    { actividad:"Revisión del referente de pensamiento y lecturas asignadas", inicio:"2026-08-11", fin:"2026-08-12", producto:"Infografía", estado:"completado" },
+    { actividad:"Definición del derecho fundamental y planteamiento del problema", inicio:"2026-08-12", fin:"2026-08-13", producto:"Documento de metas y problema", estado:"completado" },
+    { actividad:"Investigación documental y jurisprudencial", inicio:"2026-08-13", fin:"2026-08-14", producto:"Fichas de lectura y jurisprudencia", estado:"completado" },
+    { actividad:"Análisis de casos prácticos", inicio:"2026-08-13", fin:"2026-08-14", producto:"Informe de análisis de casos", estado:"completado" },
+    { actividad:"Integración de contenidos y redacción del informe", inicio:"2026-08-14", fin:"2026-08-15", producto:"Borrador del informe", estado:"completado" },
+    { actividad:"Diseño y creación del portafolio virtual (página web)", inicio:"2026-08-14", fin:"2026-08-15", producto:"Portafolio en GitHub / Web", estado:"completado" },
     { actividad:"Revisión final", inicio:"2026-08-15", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" },
     { actividad:"Autoevaluación y ajustes", inicio:"2026-08-15", fin:"2026-08-15", producto:"Informe y portafolio realizado", estado:"completado" }
   ],
