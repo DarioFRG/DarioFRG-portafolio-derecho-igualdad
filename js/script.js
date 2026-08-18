@@ -385,6 +385,17 @@ document.addEventListener("DOMContentLoaded", () => {
     </table>` : `<p class="pendiente">${PEND}</p>`;
   }
 
+  /* ---------- LECCIONES APRENDIDAS ---------- */
+const lecciones = document.getElementById("leccionesAprendidas");
+
+if (lecciones) {
+  lecciones.innerHTML = auto.lecciones?.length
+    ? auto.lecciones.map(leccion => `
+        <li>${leccion}</li>
+      `).join("")
+    : `<li class="pendiente">${PEND}</li>`;
+}
+  
   /* ---------- 13. CONCLUSIONES ---------- */
   const conclWrap = document.getElementById("conclusionesCards");
   if (conclWrap) {
