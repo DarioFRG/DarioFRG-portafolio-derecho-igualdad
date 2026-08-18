@@ -20,7 +20,7 @@ const PROYECTO = {
     asignatura: "Derecho Constitucional — Actividad Evaluativa Eje 1",
     docente: "Dr. Sandro Castillo Grimaldo",
     institucion: "Fundación Universitaria Areandina — Facultad de Ciencias Administrativas, Económicas y Financieras",
-    fecha: "Agosto 13 de 2026",
+    fecha: "Agosto 18 de 2026",
     frase: "«Todas las personas nacen libres e iguales ante la ley...» — Art. 13, Constitución Política de Colombia de 1991"
   },
 
@@ -223,7 +223,7 @@ const PROYECTO = {
   planTrabajo: [
     { fase:"Coordinación del proyecto", actividad:"Liderazgo del equipo y revisión final del trabajo", responsable:"Eliana Moreno Benítez", recursos:"Documento compartido, comunicación del equipo", producto:"Informe y portafolio revisados", estado:"completado" },
     { fase:"Investigación documental", actividad:"Revisión de fuentes, jurisprudencia, doctrina y normativa; integración de contenidos", responsable:"Angélica Chica Badel", recursos:"Relatoría Corte Constitucional, Constitución 1886 y 1991, referente de pensamiento", producto:"Fichas de lectura y jurisprudencia", estado:"completado" },
-    { fase:"Análisis de casos y desarrollo web", actividad:"Análisis de casos prácticos, diseño y desarrollo del portafolio virtual", responsable:"Darío Fernando Rubio", recursos:"Google Sites, jurisprudencia analizada", producto:"Informe de análisis de casos y portafolio en Google Sites", estado:"completado" }
+    { fase:"Análisis de casos y desarrollo web", actividad:"Análisis de casos prácticos, diseño y desarrollo del portafolio virtual", responsable:"Darío Fernando Rubio", recursos:"Visial Studio Code, jurisprudencia analizada", producto:"Informe de análisis de casos y portafolio en GitHub", estado:"completado" }
   ],
 
   cronograma: [
